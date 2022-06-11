@@ -1,5 +1,7 @@
 <script setup lang="ts"></script>
 
-<template></template>
+<template>
+  <div class="p-d-flex"></div>
+</template>
 
 <style></style>
