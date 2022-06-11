@@ -1,12 +1,23 @@
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import { createApp } from "vue";
+import { createPinia } from "pinia";
 
-import App from './App.vue'
-import router from './router'
+import App from "./App.vue";
+import router from "./router";
+import PrimeVue from "primevue/config";
+import Dialog from "primevue/dialog";
 
-const app = createApp(App)
+if (navigator.serviceWorker != null) {
+  navigator.serviceWorker.register("sw.js").then(function (registration) {
+    console.log("Registered events at scope: ", registration.scope);
+  });
+}
 
-app.use(createPinia())
-app.use(router)
+const app = createApp(App);
 
-app.mount('#app')
+app.use(createPinia());
+app.use(router);
+app.use(PrimeVue);
+
+app.component("Dialog", Dialog);
+
+app.mount("#app");
