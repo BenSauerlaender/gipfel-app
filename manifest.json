@@ -1,0 +1,10 @@
+{
+    "name": "Gipfel App",
+    "short_name": "Gipfel App",
+    "description": "Eine Gipfel App",
+    "lang": "de-DE",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff"
+}
